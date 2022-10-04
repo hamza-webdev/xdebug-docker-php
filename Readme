@@ -1,0 +1,9 @@
+## Les 2 points importants sont la configuration de l'extension Xdebug :
+
+xdebug.mode permet de choisir le mode. En le mettant en mode debug on active la possibilité d'avoir un debug pas à pas avec des points d'arrêts.
+xdebug.client_host permet d'indiquer le nom d'hôte du serveur que Xdebug va essayer de dontacter pour initialiser une session de débogage.
+
+## Configuration du container
+Pour que l'extension Xdebug puisse se connecter à la session de débogage lancée sur l'hôte il va falloir ajouter l'option de configuration extra_hosts pour brancher le nom d'hôte configuré dans l'option xdebug.client_host.
+
+services:
